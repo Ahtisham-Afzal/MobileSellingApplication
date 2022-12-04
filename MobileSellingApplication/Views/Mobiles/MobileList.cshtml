@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MobileSellingApplication.Models.Mobile>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<div class="text-center">
+    <u><h1 class="display-6">Mobile shop</h1></u><br />
+</div>
+
+<div class="row">
+    @foreach (var mobile in Model)
+    {
+        <div id="mobileContainer" class="col-lg-3 col-md-4 col-sm-6" style="padding-bottom:50px">
+            <img id="mobileImage" style="width: 80%; height: 80%;" src="@mobile.Url" alt="@mobile.Url" />
+            <h4 id="mobileTitle" style="text-align:center ; margin-top:20px">@mobile.Name</h4>
+            <span id="mobilePrice" style="color:green">Rs. Coming Soon</span>
+            @*<form>
+                 <button class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</button>
+                 <input type="number" id="number" value="0" />
+                 <button class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</button>
+            </form>*@
+            @*<span id="bookQuantity"><input id="quantityInput" type="number" name="bookQuantity" value="" placeholder="0" /></span>*@
+            @*<span id="bookCartButton"><button id="btn"><span class="fa fa-shopping-cart"></span>Add to Cart</button></span>*@
+        </div>
+    }
+</div>

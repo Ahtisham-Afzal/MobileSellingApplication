@@ -24,6 +24,10 @@ namespace MobileSellingApplication.Controllers
         {
             return View(await _context.Mobile.ToListAsync());
         }
+        public async Task<IActionResult> MobileList()
+        {
+            return View(await _context.Mobile.ToListAsync());
+        }
         public IActionResult SearchForm()
         {
             return View();
