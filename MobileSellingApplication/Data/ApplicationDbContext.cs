@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using MobileSellingApplication.Models;
 
 namespace MobileSellingApplication.Data
 {
@@ -12,5 +13,6 @@ namespace MobileSellingApplication.Data
             : base(options)
         {
         }
+        public DbSet<MobileSellingApplication.Models.Mobile> Mobile { get; set; }
     }
 }
