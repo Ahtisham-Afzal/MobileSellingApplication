@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MobileSellingApplication.Models
 {
@@ -12,5 +13,8 @@ namespace MobileSellingApplication.Models
         public string Url { get; set; }
         [Required]
         public int Price { get; set; }
+        [ForeignKey("MobileManufacturer")]
+        public int ManufacturerID { get; set; }
+        public virtual Manufacturer MobileManufacturer { get; set; }
     }
 }

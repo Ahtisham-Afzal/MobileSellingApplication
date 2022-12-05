@@ -14,5 +14,7 @@ namespace MobileSellingApplication.Data
         {
         }
         public DbSet<MobileSellingApplication.Models.Mobile> Mobile { get; set; }
+        public DbSet<MobileSellingApplication.Models.Manufacturer> Manufacturer { get; set; }
+
     }
 }
