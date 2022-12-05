@@ -68,7 +68,7 @@ namespace MobileSellingApplication.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<IActionResult> Create([Bind("Id,Name,Url")] Mobile mobile)
+        public async Task<IActionResult> Create([Bind("Id,Name,Url,Price")] Mobile mobile)
         {
             if (ModelState.IsValid)
             {
@@ -102,7 +102,7 @@ namespace MobileSellingApplication.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Url")] Mobile mobile)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Url,Price")] Mobile mobile)
         {
             if (id != mobile.Id)
             {

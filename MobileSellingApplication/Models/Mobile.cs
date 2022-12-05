@@ -10,5 +10,7 @@ namespace MobileSellingApplication.Models
         public string Name { get; set; }
         [Required]
         public string Url { get; set; }
+        [Required]
+        public int Price { get; set; }
     }
 }
